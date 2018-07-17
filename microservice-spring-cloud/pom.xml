@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>microservice-consumer-moive1</module>
+		<module>microservice-consumer-moive</module>
 		<module>microservice-consumer-moive-ribbon</module>
 		<module>microservice-consumer-moive-ribbon-properties-customizing</module>
 		<module>microservice-consumer-moive-ribbon-without-eureka</module>
