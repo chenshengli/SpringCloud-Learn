@@ -21,10 +21,15 @@ logging:
     com.itmuch: DEBUG
 eureka:
   client:
+    healthcheck:
+      enabled: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://user:password123@localhost:8761/eureka/ # 当eureka服务端添加security之后需要添加设置的用户名密码
   instance:
-    prefer-ip-address: false #注册到eureka server上是以ip形式注册的
+    prefer-ip-address: true #注册到eureka server上是以ip形式注册的
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      zone: ABC # eureka可以理解的元数据
+      lilizhou: BBC # 不会影响客户端行为
+#    lease-renewal-interval-in-seconds: 1
+#    lease-expiration-duration-in-seconds: 1

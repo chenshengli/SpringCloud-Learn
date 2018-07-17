@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>microservice-consumer-moive</artifactId>
+	<artifactId>microservice-consumer-moive-feign-customizing</artifactId>
 	<packaging>jar</packaging>
 
 	<name>microservice-consumer-moive</name>
@@ -30,6 +30,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- 添加feign启动依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
 
 	</dependencies>

@@ -10,8 +10,14 @@
 
 	<modules>
 		<module>microservice-consumer-moive</module>
+		<module>microservice-consumer-moive-ribbon</module>
+		<module>microservice-consumer-moive-ribbon-properties-customizing</module>
+		<module>microservice-consumer-moive-ribbon-without-eureka</module>
+		<module>microservice-consumer-moive-feign</module>
+		<module>microservice-consumer-moive-feign-customizing</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-discovery-eureka-ha</module>
 	</modules>
 
 	<properties>
@@ -26,6 +32,7 @@
 		<version>1.4.1.RELEASE</version>
 	</parent>
 
+	<!-- 通过元素来管理jar包的版本，让子项目中引用一个依赖而不用显示的列出版本号 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -38,6 +45,7 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<!--  相对于dependencyManagement，所有生命在dependencies里的依赖都会自动引入，并默认被所有的子项目继承 -->
 	<dependencies>
 
 	</dependencies>

@@ -1,10 +1,8 @@
 spring:
   application:
-    name: microservice-consumer-movie
+    name: microservice-consumer-movie-feign-customizing
 server:
   port: 7901
-user:
-  userServicePath: http://localhost:7900/simple/
 eureka:
   client:
     healthcheck:
@@ -13,3 +11,6 @@ eureka:
       defaultZone: http://user:password123@localhost:8761/eureka
   instance:
     prefer-ip-address: true
+logging:
+  level:
+    com.sunny.cloud.feign.UserFeignClient: DEBUG #添加日志所需要的配置

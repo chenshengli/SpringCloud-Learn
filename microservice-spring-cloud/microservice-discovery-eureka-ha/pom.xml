@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>microservice-consumer-moive</artifactId>
+	<artifactId>microservice-discovery-eureka-ha</artifactId>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-moive</name>
+	<name>microservice-discovery-eureka</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -17,21 +17,16 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 
-		<!-- springboot监控管理的依赖 -->
-		<dependency>
+		<!-- 添加security才需要，即登录认证 -->
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>-->
 	</dependencies>
+
 
 </project>
