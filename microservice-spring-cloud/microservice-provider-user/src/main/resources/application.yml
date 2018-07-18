@@ -31,5 +31,5 @@ eureka:
     metadata-map:
       zone: ABC # eureka可以理解的元数据
       lilizhou: BBC # 不会影响客户端行为
-#    lease-renewal-interval-in-seconds: 1
-#    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 1

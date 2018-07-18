@@ -6,7 +6,7 @@
 	<artifactId>microservice-consumer-moive-feign-customizing</artifactId>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-moive</name>
+	<name>microservice-consumer-moive-feign-customizing</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

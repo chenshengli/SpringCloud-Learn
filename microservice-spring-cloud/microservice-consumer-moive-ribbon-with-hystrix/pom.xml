@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>microservice-consumer-moive-ribbon-properties-customizing</artifactId>
+	<artifactId>microservice-consumer-moive-ribbon-with-hystrix</artifactId>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-moive-ribbon-properties-customizing</name>
+	<name>microservice-consumer-moive-ribbon-with-hystrix</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -30,6 +30,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- hystrix的依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
 	</dependencies>

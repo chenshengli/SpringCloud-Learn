@@ -6,7 +6,7 @@
 	<artifactId>microservice-consumer-moive-ribbon-without-eureka</artifactId>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-moive</name>
+	<name>microservice-consumer-moive-ribbon-without-eureka</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

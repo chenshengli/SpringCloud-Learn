@@ -11,10 +11,15 @@
 	<modules>
 		<module>microservice-consumer-moive</module>
 		<module>microservice-consumer-moive-ribbon</module>
+		<module>microservice-consumer-moive-ribbon-with-hystrix</module>
+		<module>microservice-consumer-moive-ribbon-with-hystrix-propagation</module>
 		<module>microservice-consumer-moive-ribbon-properties-customizing</module>
 		<module>microservice-consumer-moive-ribbon-without-eureka</module>
 		<module>microservice-consumer-moive-feign</module>
+		<module>microservice-consumer-moive-feign-with-hystrix</module>
+		<module>microservice-consumer-moive-feign-with-hystrix-factory</module>
 		<module>microservice-consumer-moive-feign-customizing</module>
+		<module>microservice-consumer-moive-feign-customizing-without-hystrix</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-discovery-eureka-ha</module>

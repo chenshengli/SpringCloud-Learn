@@ -6,7 +6,7 @@
 	<artifactId>microservice-discovery-eureka-ha</artifactId>
 	<packaging>jar</packaging>
 
-	<name>microservice-discovery-eureka</name>
+	<name>microservice-discovery-eureka-ha</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
