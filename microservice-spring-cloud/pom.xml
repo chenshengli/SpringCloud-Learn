@@ -23,6 +23,8 @@
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-discovery-eureka-ha</module>
+		<module>microservice-hystrix-dashborad</module>
+		<module>microservice-hystrix-turbine</module>
 	</modules>
 
 	<properties>

@@ -1,0 +1,32 @@
+server:
+  port: 8031
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/ # 当eureka服务端添加security之后需要添加设置的用户名密码
+  instance:
+    prefer-ip-address: true #注册到eureka server上是以ip形式注册的
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: mircoservice-hystrix-trubine
+#添加turbine需要的
+#turbine:
+#  aggregator:
+#    clusterConfig: default #指定聚合哪些集群，多个使用“,”分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
+#  appConfig: microservice-consumer-movie-ribbon-with-hystrix,microservice-consumer-movie-feign-with-hystrix
+#  clusterNameExpression: "'default'"
+
+turbine:
+  aggregator:
+    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX #指定聚合哪些集群，多个使用“,”分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
+  appConfig: microservice-consumer-movie-ribbon-with-hystrix
+
+turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX: ribbon/hystrix.stream #项目带前缀的声明
+
+logging:
+  level:
+    root: INFO
+    com.netflix.turbine.monitor: DEBUG
+
+
