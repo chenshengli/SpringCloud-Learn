@@ -1,0 +1,22 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: mircoservice-gateway-zuul
+zuul:
+  routes:
+    users: # 为mapping取个名字，需要唯一
+      path: /myusers/** # mapping地址
+      serviceId: mircoservice-provider-user # 服务id
+ribbon: # zuul负载均衡需要
+  eureka:
+    enabled: false
+mircoservice-provider-user: # 服务id
+  ribbon:
+    listOfServers: http://192.168.80.1:7900,http://192.168.80.1:7901 #zuul负载均衡的实现

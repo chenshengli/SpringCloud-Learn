@@ -1,0 +1,19 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: mircoservice-gateway-zuul
+zuul:
+  prefix: /simple
+  strip-prefix: false # 为true则实际请求url会删除prefix这个属性的mapping，为false则会保留，只影响prefix这个配置属性
+  ignored-patterns: /**/simple/** # 忽略的路径
+logging:
+  level:
+    com.netflix: debug
+

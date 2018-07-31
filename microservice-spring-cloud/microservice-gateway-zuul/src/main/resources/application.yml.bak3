@@ -1,0 +1,17 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: mircoservice-gateway-zuul
+zuul:
+  routes:
+    users: # 为mapping取个名字，需要唯一
+      path: /myusers/** # mapping地址
+      url: http://192.168.80.1:7900/ # 服务url
+

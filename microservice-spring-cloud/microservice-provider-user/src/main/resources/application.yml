@@ -12,6 +12,7 @@ spring:
     data: classpath:data.sql
   application:
     name: mircoservice-provider-user # 最好全部小写
+#    name: mircoservice-provider-user-v1 # for microservice-gateway-zuul-reg-exp 的实例
 logging:
   level:
     root: INFO

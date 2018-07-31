@@ -1,0 +1,16 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: mircoservice-gateway-zuul
+zuul:
+  routes:
+    mircoservice-provider-user: /user/** # 声明服务代理的mapping，使用后可以用服务名称或者声明的mapping去访问
+  ignored-services: '*' # '*'--忽略所有服务，只代理routes里面声明服务，或者使用服务名称用逗号隔开声明哪些服务被忽略
+
